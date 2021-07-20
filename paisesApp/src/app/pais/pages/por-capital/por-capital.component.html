@@ -1,0 +1,37 @@
+<h2>Por Capital</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <form autocomplete="off" >
+
+            <app-input (query)="setcapitalName($event)" ></app-input>
+
+        </form>
+    </div>
+</div>
+
+<hr>
+
+<div class="alert alert-danger" *ngIf="flagError">
+    No se encontró nada con el término ingresado
+</div>
+
+
+<div class="row" *ngIf="flagWaiting">
+    <div class="col">
+        <div class="alert alert-info" role="alert">
+            Loading...
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row" *ngIf="!flagError && listaCapitales.length > 0">
+    <div class="col">
+
+        <app-tabla [listaCapitales]="listaCapitales"></app-tabla>
+
+    </div>
+</div>

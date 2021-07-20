@@ -1,0 +1,71 @@
+<table class="table table-hover animate__animated animate__bounce" *ngIf="flagPais">
+  <thead>
+    <tr>
+      <th> # </th>
+      <th> Bandera </th>
+      <th> Nombre </th>
+      <th> Población </th>
+      <th> </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let item of listData ; let i = index">
+
+      <th> {{ i }} </th>
+
+      <th>
+        <img [src]="item.flag" class="img-fluid img-thumbnail small-image" [alt]="item.name">
+      </th>
+
+      <th> {{ item.name }} </th>
+
+      <th> {{ item.population | number }} </th>
+
+      <td>
+        <a [routerLink]="['/pais', item.alpha2Code]" routerLinkActive="router-link-active">Ver....</a>
+      </td>
+
+    </tr>
+  </tbody>
+
+
+
+</table>
+
+
+<table class="table table-hover animate__animated animate__bounce" *ngIf="flagCapital">
+  <thead>
+      <tr>
+          <th> # </th>
+          <th> Bandera - Pais </th>
+          <th> Capital </th>
+          <th> Zona horaria </th>
+          <th> </th>
+      </tr>
+  </thead>
+
+  <tbody >
+      <tr *ngFor="let item of listData ; let i = index">
+
+        <th> {{ i }} </th>
+
+        <th>
+          <img [src]="item.flag" class="img-fluid img-thumbnail small-image" [alt]="item.name">
+        </th>
+
+        <th> {{ item.capital }} </th>
+
+        <th> {{ item.timezones  }} </th>
+
+        <td>
+          <a [routerLink]="['/pais', item.alpha2Code]" routerLinkActive="router-link-active" >Ver país...</a>
+        </td>
+
+      </tr>
+  </tbody>
+
+  
+  
+</table>
+
