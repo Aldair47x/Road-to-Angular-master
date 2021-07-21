@@ -12,4 +12,9 @@ export class NumerosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ventasNetas: number = 2334234.3422;
+  porcentaje: number = 0.47;
+
+
+
 }
