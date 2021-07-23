@@ -12,4 +12,14 @@ export class OrdenarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  mayusFlag: boolean = false;
+
+  cambiarMayusculas = () => {
+    if(this.mayusFlag){
+      this.mayusFlag = false;
+    } else {
+      this.mayusFlag = true;
+    }
+  }
+
 }

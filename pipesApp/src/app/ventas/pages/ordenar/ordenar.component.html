@@ -1,1 +1,26 @@
-<p>ordenar works!</p>
+<div class="text-layout">
+    <h1>Pipes personalizados</h1>
+    <p>
+        Pipes creados por Aldair47x
+    </p>
+</div>
+
+<div class="grid text-layout text-layout flex align-items-center justify-content-center">
+
+    <div class="col-10">
+
+        <p-fieldset legend="Toggle lower/upper case" [toggleable]="true">
+
+            <p>
+                {{ "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium in dolor eligendi, asperiores" | mayusculas: mayusFlag }}
+            </p>
+
+            <button pButton type="button" label="Cambiar may/min" (click)="cambiarMayusculas()" class="p-button-success"></button>
+            
+        </p-fieldset>
+        
+    </div>
+
+    
+
+</div>
