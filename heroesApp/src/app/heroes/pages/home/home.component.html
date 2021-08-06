@@ -4,7 +4,9 @@
 
     <mat-toolbar color="primary">
       <span>Menú</span>
+
       <span class="spacer"></span>
+
       <button (click)="sidenav.toggle()" mat-icon-button aria-label="Example icon button with a home icon">
         <mat-icon>menu</mat-icon>
       </button>
@@ -34,19 +36,19 @@
 
   </mat-sidenav>
 
-  <mat-toolbar>
+  <mat-toolbar fxLayoutGap="20px">
 
-    <button (click)="sidenav.toggle()" mat-fab color="warn" aria-label="Example icon button with a home icon">
+    <button (click)="sidenav.toggle()" mat-fab color="warn" >
       <mat-icon>home</mat-icon>
     </button>
 
-    <span class="spacer">
+    <span class="spacer"></span>
+    <span >{{ auth.usuario }}</span>
+    
 
-    </span>
 
-    <button (click)="sidenav.toggle()" mat-fab color="warn" aria-label="Example icon button with a home icon">
-        
-        Logout
+    <button (click)="sidenav.toggle()"  (click)="logout()" mat-fab color="warn">
+      Logout
     </button>
 
   </mat-toolbar>
